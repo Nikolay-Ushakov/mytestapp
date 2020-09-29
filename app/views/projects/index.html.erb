@@ -1,0 +1,16 @@
+<h1>SIMPLE TODO LIST
+  <br>
+  <small>FROM RUBY GARAGE</small>
+</h1>
+<div class="col-sm-8 col-sm-offset-2">
+  <div class="buffer-top">
+    <ul id="projects" class="projects-list">
+      <%= render @projects %>
+    </ul>
+  </div>
+  <hr />
+  <div id="new-project" class="new-project-button">
+    <%= link_to "Add TODO list", new_project_path, remote: true, class: 'btn btn-primary' %>
+  </div>
+  <hr />
+</div>

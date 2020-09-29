@@ -1,0 +1,12 @@
+$('#task-<%= @task.id %>').hide().parent().prepend("<%= j render 'form', task: @task %>");
+
+$(document).mouseup(function(e)
+{
+    let container = $('#edit_task_<%= @task.id %>');
+    if (!container.is(e.target) && container.has(e.target).length === 0)
+    {
+        container.remove();
+        $('#task-<%= @task.id %>').show();
+    }
+
+});

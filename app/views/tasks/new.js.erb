@@ -1,0 +1,10 @@
+$('#new-task a').hide().parent().append("<%= j render 'form' %>");
+$(document).mouseup(function(e)
+{
+    let container = $("#new-task form");
+    if (!container.is(e.target) && container.has(e.target).length === 0)
+    {
+        container.remove();
+        $('#new-task a').show();
+    }
+});

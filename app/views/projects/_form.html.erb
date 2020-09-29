@@ -1,0 +1,8 @@
+<%= simple_form_for @project, remote: true, validate: true do |f| %>
+	<div class='new-task-input-group'>
+			<%= f.input :name, label: false %>
+		<div class="input-btn">
+			<%= f.button :submit, label: false, class: 'btn btn-primary' %>
+		</div>
+	</div>
+<% end %>

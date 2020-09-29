@@ -1,0 +1,10 @@
+<li class="task-item">
+  <div id="task-<%= task.id %>" class="task task-header spriority_<%= task.priority %> completed_<%= task.status %>">
+      <span><%= link_to content_tag('span', '', class: 'fa fa-check-square-o'), complete_task_path(task), data: {method: :put}, remote: true, class: 'done' %></span>
+      <span class="task-item-title"><%= task.title %></span>
+	<div class="task-header-options">
+      <span class="task-item-edit"><%= link_to content_tag('span', '', class: 'fa fa-pencil'), edit_task_path(task), remote: true, class: 'action' %></span>
+      <span class="task-item-destroy"><%= link_to content_tag('span', '', class: 'fa fa-trash'), task, method: :delete, remote: true, class: 'action' %></span>
+	</div>
+  </div>
+</li>

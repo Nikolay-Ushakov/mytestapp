@@ -1,0 +1,243 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {  
+  background: linear-gradient(#bdba9d, #cb7c10);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.75em;
+  line-height: 1.42857143;
+  color: #333333;
+}
+
+h1 {
+  text-align: center;
+  margin: 60px 0 40px 0;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #fff;
+  font-weight: bold;
+}
+
+.buffer-top {
+  margin-top: 10px;
+}
+
+.task {
+
+  .action {
+    opacity: 0;
+  }
+
+  &:hover .action {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+}
+
+.priority_1 {color: #009090;}
+.priority_2 {color: #c09000;}
+.priority_3 {color: #c00000;}
+.completed_true .task-item-title {
+  margin-left: 30px;
+  padding: 12px 10px 14px 10px;
+  color: #c0c0c0; 
+  text-decoration: line-through;
+  border-left: 1px solid #5e505024;
+}
+
+.done {
+  padding: 13px 14px 13px 0px;
+  border-right: 1px solid #5e505024;
+}
+
+.completed_true .done {display: none}
+
+.deadline {
+  line-height: 1;
+}
+
+.copyright {
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.new-project-button{
+  text-align: center;
+}
+
+.projects-list {
+  padding-left: 0;
+}
+
+#projects > li {
+  background-color: #fff;
+  margin-bottom: 20px;
+  list-style-type: none;
+  border: 1px solid transparent;
+  border-color: #337ab7;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.project-header {
+  height: 45px;
+  padding: 10px 15px;
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.project-header {
+  .action {
+      opacity: 0;
+    }
+
+    &:hover .action {
+      margin: 0px 2px;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+      color: #f7f4f4;
+    }
+}
+
+.project-header-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: inherit;
+}
+
+.project-header-name {
+  margin: 0px 2px;
+}
+
+.project-header-options {
+  float: right;
+}
+
+.new-task-container {
+  height: 54px;
+  padding: 10px;
+  background-color: #d6dddd;
+}
+
+.new-task-input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+
+.new-task-input-group .form-group {
+  margin-bottom: 0;
+}
+
+.input-btn {
+  width: 1%;
+  position: relative;
+  display: table-cell;
+  font-size: 0;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.tasks-list {
+  padding: 0px;
+}
+
+.task-item {
+  list-style-type: none;
+  border-bottom: 1px solid #5e505024;
+}
+
+.task-header {
+  height: 45px;
+  padding: 10px 15px 8px 15px;
+}
+
+.task-item-title {
+  padding: 13px 0px 13px 15px;
+  border-left: 1px solid #5e505024;
+}
+
+.task-header-options {
+  float: right;
+}
+
+.task-item-edit {
+  padding: 13px 15px 13px 15px;
+  border-right: 1px solid #5e505024;
+  border-left: 1px solid #5e505024;
+}
+
+.task-item-destroy {
+  padding: 13px 0px 13px 15px;
+  border-left: 1px solid #5e505024;
+}
+
+.task-input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  padding: 10px 10px 0px 10px;
+}
+
+.task-input-group .form-group {
+  margin-bottom: 0;
+}
+
+.input-task-btn {
+  width: 1%;
+  position: relative;
+  display: table-cell;
+  font-size: 0;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.input-task-status {
+  width: 1%;
+  position: relative;
+  display: table-cell;
+  padding: 6px 75px 10px 15px;
+  font-size: 0;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.edit_task {
+margin-bottom: 10px;
+}
+
+.invalid-feedback {
+  position: absolute;
+  display: block;
+  z-index: 1000;
+  top: -15px;
+  left: 5px;
+
+    .action {
+      opacity: 0;
+    }
+
+    &:hover .action {
+      margin: 0px 2px;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+      color: #f7f4f4;
+    }
+}

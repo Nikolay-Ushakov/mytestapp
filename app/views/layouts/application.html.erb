@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mytestapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row"><%= yield %></div>    
+      <div class="row">
+          <div class="copyright text-center">
+            <p>&#169; Ruby Garage</p>
+          </div>
+      </div>
+  </div>
+  </body>
+</html>

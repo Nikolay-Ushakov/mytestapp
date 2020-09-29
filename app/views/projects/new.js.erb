@@ -1,0 +1,14 @@
+$('#new-project a').hide().parent().append("<%= j render 'form' %>");
+
+$(document).mouseup(function(e)
+{
+    let container = $("#new-project form");
+    if (!container.is(e.target) && container.has(e.target).length === 0)
+    {
+        container.remove();
+        $('#new-project a').show();
+    }
+
+});
+
+$(new_form).enableClientSideValidations();
